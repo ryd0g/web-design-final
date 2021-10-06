@@ -179,12 +179,8 @@
       // --color-sample-1 : green
       // ...
       // --color-sample-99 : blue
-      function getRandomColor() {
-        var letters = '0123456789ABCDEF';
-        var color = '#';
-        for (var i = 0; i < 6; i++) {
-          color += letters[Math.floor(Math.random() * 16)];
-        }
+      function RGB() {
+        var color = Math.floor(Math.random() * 257);
         return color;
       }
       // make some swatches
@@ -194,7 +190,7 @@
 				<div 
 					class="swatch add-to-cart color-${i}" 
 					data-color="Color ${i}" 
-          style="background-color: ${getRandomColor()}"
+          style="background-color: rgb(${RGB()}, ${RGB()}, ${RGB()})"
 					data-price="${(Math.random() * 10).toFixed(2)}"></div>`;
         document.querySelector('.swatches').innerHTML += swatch;
       }
