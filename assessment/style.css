@@ -3,7 +3,7 @@
 #about,
 #popular,
 #swatches {
-  min-height: 100vh;
+  min-height: 75vh;
 }
 #cart,
 #contact {
@@ -29,11 +29,18 @@ body {
   position: stick;
 }
 
+#nav > header {
+  margin: auto;
+}
+
 #nav a {
   color: rgb(90, 70, 202);
-  text-decoration: none;
   display: inline-block;
   margin: 1em;
+}
+
+a:hover {
+  color: rgb(157, 145, 226);
 }
 
 /* cards */
@@ -75,7 +82,6 @@ label {
 
 input {
   margin: 5px 0 5px 0;
-  font-size: 17px;
   line-height: 1.75;
   padding-left: 5px;
 }
@@ -89,7 +95,7 @@ button {
   border: 1px solid;
   color: var(--fg-color);
   border-radius: 0.5rem;
-  font-size: 1rem;
+  font-size: 0.7rem;
   transition: 300ms;
   margin: 5px 0 5px 0;
 }
@@ -104,6 +110,7 @@ form {
 
 form > button {
   width: 100px;
+  font-size: 17px;
 }
 
 /* ticker animation */
