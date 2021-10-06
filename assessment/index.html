@@ -12,7 +12,6 @@
 
       .swatch {
         /* Remove this rule when you set your colors! */
-        background-color: blue;
         margin: 1px;
       }
 
@@ -180,7 +179,14 @@
       // --color-sample-1 : green
       // ...
       // --color-sample-99 : blue
-
+      function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
       // make some swatches
       const swatchCount = 100;
       for (let i = 0; i < swatchCount; i += 1) {
@@ -188,6 +194,7 @@
 				<div 
 					class="swatch add-to-cart color-${i}" 
 					data-color="Color ${i}" 
+          style="background-color: ${getRandomColor()}"
 					data-price="${(Math.random() * 10).toFixed(2)}"></div>`;
         document.querySelector('.swatches').innerHTML += swatch;
       }
