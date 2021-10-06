@@ -87,9 +87,34 @@ button {
 form {
   display: flex;
   flex-direction: column;
-  padding: 5px 0 5px 0;
+  align-items: flex-start;
+  padding: 10px 0 10px 0;
 }
 
 form > button {
   width: 100px;
+}
+
+/* ticker animation */
+#banner {
+  min-height: 25vh;
+}
+
+ticker-tape {
+  position: absolute;
+  white-space: nowrap;
+  -webkit-animation: rightThenLeft 10s linear;
+  padding: 20px 0 20px 0;
+}
+
+@-webkit-keyframes rightThenLeft {
+  0% {
+    left: 0%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+  }
 }
